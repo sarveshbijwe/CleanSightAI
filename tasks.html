@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - CleanSightAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>CleanSightAI</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="monitoring.html"><i class="fas fa-video"></i> Monitoring</a></li>
+                <li class="active"><a href="tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>© 2023 CleanSightAI</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-title">
+                    <h1>Tasks Management</h1>
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user">
+                        <img src="img/user-avatar.png" alt="User Avatar" class="avatar">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Task Summary Cards -->
+            <div class="summary-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="card-info">
+                        <h3>Total Tasks</h3>
+                        <p class="card-value">32</p>
+                        <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 8% from yesterday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="card-info">
+                        <h3>Pending Tasks</h3>
+                        <p class="card-value">12</p>
+                        <p class="card-trend negative"><i class="fas fa-arrow-up"></i> 15% from yesterday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-spinner"></i></div>
+                    <div class="card-info">
+                        <h3>In Progress</h3>
+                        <p class="card-value">8</p>
+                        <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 5% from yesterday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="card-info">
+                        <h3>Completed</h3>
+                        <p class="card-value">12</p>
+                        <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 20% from yesterday</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Controls -->
+            <div class="task-controls">
+                <div class="control-panel">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search tasks...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="btn btn-secondary"><i class="fas fa-filter"></i> Filter</button>
+                        <button class="btn btn-secondary"><i class="fas fa-sort"></i> Sort</button>
+                        <button class="btn btn-primary" title="Create Task"><i class="fas fa-plus"></i> Create Task</button>
+                    </div>
+                </div>
+                <div class="filter-options" style="display: none;">
+                    <select class="form-select">
+                        <option value="all">All Locations</option>
+                        <option value="building-a">Building A</option>
+                        <option value="building-b">Building B</option>
+                        <option value="building-c">Building C</option>
+                        <option value="cafeteria">Cafeteria</option>
+                        <option value="entrance">Entrance Hall</option>
+                    </select>
+                    <select class="form-select">
+                        <option value="all">All Statuses</option>
+                        <option value="pending">Pending</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <select class="form-select">
+                        <option value="all">All Types</option>
+                        <option value="spill">Spill Cleanup</option>
+                        <option value="garbage">Garbage Removal</option>
+                    </select>
+                    <button class="btn btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list">
+                <!-- Task 1 -->
+                <div class="task-item">
+                    <div class="task-status pending"></div>
+                    <div class="task-content">
+                        <div class="task-header">
+                            <h3>Liquid Spill Cleanup</h3>
+                            <span class="task-id">#TASK-001</span>
+                        </div>
+                        <div class="task-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Main Corridor, Building A</p>
+                            <p><i class="fas fa-clock"></i> Created: Today, 10:45 AM</p>
+                            <p><i class="fas fa-flag"></i> Priority: High</p>
+                        </div>
+                        <div class="task-meta">
+                            <span class="badge spill">Spill</span>
+                            <span class="status pending">Pending</span>
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-primary">Assign Task</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="task-item">
+                    <div class="task-status in-progress"></div>
+                    <div class="task-content">
+                        <div class="task-header">
+                            <h3>Overflowing Bin Cleanup</h3>
+                            <span class="task-id">#TASK-002</span>
+                        </div>
+                        <div class="task-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Cafeteria, Building B</p>
+                            <p><i class="fas fa-clock"></i> Created: Today, 10:32 AM</p>
+                            <p><i class="fas fa-flag"></i> Priority: Medium</p>
+                        </div>
+                        <div class="task-meta">
+                            <span class="badge garbage">Garbage</span>
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-warning">Mark Complete</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Task 3 -->
+                <div class="task-item">
+                    <div class="task-status completed"></div>
+                    <div class="task-content">
+                        <div class="task-header">
+                            <h3>Litter Removal</h3>
+                            <span class="task-id">#TASK-003</span>
+                        </div>
+                        <div class="task-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Entrance Hall, Building C</p>
+                            <p><i class="fas fa-clock"></i> Created: Today, 09:45 AM</p>
+                            <p><i class="fas fa-flag"></i> Priority: Low</p>
+                        </div>
+                        <div class="task-meta">
+                            <span class="badge garbage">Garbage</span>
+                            <span class="status completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-success" disabled>Completed</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Task 4 -->
+                <div class="task-item">
+                    <div class="task-status pending"></div>
+                    <div class="task-content">
+                        <div class="task-header">
+                            <h3>Bathroom Spill Cleanup</h3>
+                            <span class="task-id">#TASK-004</span>
+                        </div>
+                        <div class="task-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Restroom Entrance, Building B</p>
+                            <p><i class="fas fa-clock"></i> Created: Today, 09:58 AM</p>
+                            <p><i class="fas fa-flag"></i> Priority: High</p>
+                        </div>
+                        <div class="task-meta">
+                            <span class="badge spill">Spill</span>
+                            <span class="status pending">Pending</span>
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-primary">Assign Task</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Task 5 -->
+                <div class="task-item">
+                    <div class="task-status in-progress"></div>
+                    <div class="task-content">
+                        <div class="task-header">
+                            <h3>Hallway Garbage Collection</h3>
+                            <span class="task-id">#TASK-005</span>
+                        </div>
+                        <div class="task-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Hallway, Building A</p>
+                            <p><i class="fas fa-clock"></i> Created: Today, 10:15 AM</p>
+                            <p><i class="fas fa-flag"></i> Priority: Medium</p>
+                        </div>
+                        <div class="task-meta">
+                            <span class="badge garbage">Garbage</span>
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-warning">Mark Complete</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <ul class="pagination-list">
+                    <li><a href="#" class="pagination-link"><i class="fas fa-chevron-left"></i></a></li>
+                    <li><a href="#" class="pagination-link active">1</a></li>
+                    <li><a href="#" class="pagination-link">2</a></li>
+                    <li><a href="#" class="pagination-link">3</a></li>
+                    <li><a href="#" class="pagination-link"><i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+                <div class="pagination-info">
+                    <span>Showing 1-5 of 32 tasks</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/tasks.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

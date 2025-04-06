@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanSightAI - AI Waste Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>CleanSightAI</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="monitoring.html"><i class="fas fa-video"></i> Monitoring</a></li>
+                <li><a href="tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>© 2023 CleanSightAI</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-title">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user">
+                        <img src="img/user-avatar.png" alt="User Avatar" class="avatar">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-trash-alt"></i></div>
+                        <div class="card-info">
+                            <h3>Total Detections</h3>
+                            <p class="card-value">247</p>
+                            <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 12% from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-water"></i></div>
+                        <div class="card-info">
+                            <h3>Spills Detected</h3>
+                            <p class="card-value">58</p>
+                            <p class="card-trend negative"><i class="fas fa-arrow-down"></i> 5% from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-broom"></i></div>
+                        <div class="card-info">
+                            <h3>Tasks Assigned</h3>
+                            <p class="card-value">32</p>
+                            <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 8% from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="card-info">
+                            <h3>Tasks Completed</h3>
+                            <p class="card-value">28</p>
+                            <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 15% from yesterday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Detections -->
+                <div class="recent-detections">
+                    <div class="section-header">
+                        <h2>Recent Detections</h2>
+                        <a href="monitoring.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="detection-list">
+                        <div class="detection-item">
+                            <div class="detection-image">
+                                <img src="img/spill-1.jpg" alt="Spill Detection">
+                                <span class="detection-type spill">Spill</span>
+                            </div>
+                            <div class="detection-details">
+                                <h3>Liquid Spill</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Main Corridor, Building A</p>
+                                <p><i class="fas fa-clock"></i> 10 minutes ago</p>
+                                <span class="status pending">Pending Cleanup</span>
+                            </div>
+                            <div class="detection-actions">
+                                <button class="btn btn-primary">Assign Task</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                        <div class="detection-item">
+                            <div class="detection-image">
+                                <img src="img/garbage-1.jpg" alt="Garbage Detection">
+                                <span class="detection-type garbage">Garbage</span>
+                            </div>
+                            <div class="detection-details">
+                                <h3>Overflowing Bin</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Cafeteria, Building B</p>
+                                <p><i class="fas fa-clock"></i> 25 minutes ago</p>
+                                <span class="status in-progress">Cleanup In Progress</span>
+                            </div>
+                            <div class="detection-actions">
+                                <button class="btn btn-primary" disabled>Assigned</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                        <div class="detection-item">
+                            <div class="detection-image">
+                                <img src="img/garbage-2.jpg" alt="Garbage Detection">
+                                <span class="detection-type garbage">Garbage</span>
+                            </div>
+                            <div class="detection-details">
+                                <h3>Litter on Floor</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Entrance Hall, Building C</p>
+                                <p><i class="fas fa-clock"></i> 45 minutes ago</p>
+                                <span class="status completed">Cleaned</span>
+                            </div>
+                            <div class="detection-actions">
+                                <button class="btn btn-primary" disabled>Completed</button>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="performance-metrics">
+                    <div class="section-header">
+                        <h2>Performance Metrics</h2>
+                        <a href="analytics.html" class="view-all">View Analytics <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="metrics-container">
+                        <div class="metric-card">
+                            <h3>Average Response Time</h3>
+                            <div class="metric-value">12 <span>min</span></div>
+                            <div class="metric-chart">
+                                <canvas id="responseTimeChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Detection Accuracy</h3>
+                            <div class="metric-value">94<span>%</span></div>
+                            <div class="metric-chart">
+                                <canvas id="accuracyChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Task Completion Rate</h3>
+                            <div class="metric-value">87<span>%</span></div>
+                            <div class="metric-chart">
+                                <canvas id="completionRateChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
